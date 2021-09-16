@@ -24,7 +24,7 @@ I want to show here how to use a 12V fan for a chamber on the Geeetech A10 with 
 
 It uses the LED-header of the board for a PWM-Signal. The normal FAN-header only provide constant 24V. The NTC is connected with the capacitor and the 4.7k Ohm Pull-up resistor to 5V. On the other side with the ADC1-header. It does not work with the ADC0 header for me. Some converters need a constant load at the output, so maybe it is necessary to add an extra resistor at the output.
 
-![schematic board](./img/schematic_board.jpg)  
+![schematic board](./img/schematic_board.JPG)  
 
 (not in the picture: the right pin on the usb connector should also be 5V if needed.)
 
@@ -45,7 +45,7 @@ In Configuration.h:
 In Configuration_adv.h:
 - Here you need to set the `CHAMBER_AUTO_FAN_PIN` to 6 (usually used for LED) and you can change the temperatures and fan speed.
 
-![fan pin](./img/fan_pins.JPG)
+![fan pin](./img/fan_pins.jpg)
 
 Now it is time to flash the firmware and that is all.
 
