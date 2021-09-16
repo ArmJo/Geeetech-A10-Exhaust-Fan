@@ -39,13 +39,13 @@ In Configuration.h:
 
 - Change the NTC-Thermistor for the chamber (according to the one you used) `TEMP_SENSOR_CHAMBER` and define the ADC1 pin for it `TEMP_CHAMBER_PIN`.   
 
-![ntc pin](./img/ntc_pins.JPG)
+![ntc pin](./img/ntc_pins.jpg)
 
 
 In Configuration_adv.h:
 - Here you need to set the `CHAMBER_AUTO_FAN_PIN` to 6 (usually used for LED) and you can change the temperatures and fan speed.
 
-![fan pin](./img/fan_pins.jpg)
+![fan pin](./img/fan_pins.JPG)
 
 Now it is time to flash the firmware and that is all.
 
