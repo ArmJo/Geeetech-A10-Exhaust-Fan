@@ -10,7 +10,7 @@ I want to show here how to use a 12V fan for a chamber on the Geeetech A10 with 
 
 ### Requirements:
 
-- 12V or 24V fan
+- 12V or 24V fan (I used a noctua 140mm fan and a [IKEA Lack mounting](https://www.thingiverse.com/thing:4950249))
 - DC/DC Converter (24V to 12V e.g. LM2596S - only needed for 12V fan)
 - 4.7k Ohm resistor
 - 10uF capacitor (no exact match needed)
