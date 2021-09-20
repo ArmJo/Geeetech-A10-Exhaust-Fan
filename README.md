@@ -52,3 +52,38 @@ Now it is time to flash the firmware and that is all.
 You can find my current Marlin configuration [here](https://github.com/Jonas2903/Marlin-Geeetech-A10-TMC2209-UART-BLTouch).
 
 Do not forget to enable chamber temperature in octoprint if you use it to see the temperature in the graphs.
+
+### Firmware (Klipper):
+
+In Klipper it is very easy to add an exhaust fan with chamber temperature
+
+```
+[temperature_fan chamber]
+pin: PH3
+max_power: 1.0
+shutdown_speed: 0.0
+kick_start_time: 5.0
+cycle_time:0.01
+off_below:0.1
+sensor_type: NTC 100K beta 3950
+sensor_pin: PF1
+min_temp: 0
+max_temp: 70
+target_temp: 35.0
+control: watermark
+gcode_id: C
+```
+
+optional:
+
+```
+# ==================================================================
+# GCode Macro M141
+# M141 for Chamber temperature change
+# ==================================================================
+[gcode_macro M141]
+default_parameter_S: 0
+default_parameter_P: 0
+gcode:
+    SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={S}
+```
