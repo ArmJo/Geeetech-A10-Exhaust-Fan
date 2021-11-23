@@ -77,13 +77,13 @@ gcode_id: C
 optional:
 
 ```
-# ==================================================================
+# ================================================================================
 # GCode Macro M141
 # M141 for Chamber temperature change
-# ==================================================================
+# ================================================================================
 [gcode_macro M141]
-default_parameter_S: 0
-default_parameter_P: 0
 gcode:
+    {% set S = params.S|default(0)|float %}
+    {% set P = params.P|default(0)|float %}
     SET_TEMPERATURE_FAN_TARGET temperature_fan="chamber" target={S}
 ```
